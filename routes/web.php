@@ -12,8 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/sobre', function () {
+    return view('about');
+})->name('about');
+
+
 
 Route::get('/categorias', 'CategoryController@index')->name('list_categories');
 Route::get('/categorias/adicionar', 'CategoryController@create')->name('addCategory');

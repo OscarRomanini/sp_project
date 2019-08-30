@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('cabecalho')
-    Novo Produto
+    <i class="fas fa-plus-circle mr-3"></i>Novo Produto
 @endsection
 
 @section('conteudo')
@@ -18,8 +18,6 @@
 
     <form method="post">
         @csrf
-        {{--            evita posts falsos--}}
-
         <div class="form-group">
 
             <label for="name">Nome:</label>
@@ -36,13 +34,13 @@
                 @endforeach
             </select>
 
-            <label for="description">Descrição:</label>
+            <label for="description" class="mt-2">Descrição:</label>
             <input type="text" class="form-control col-md-4" name="description">
 
-            <label for="price">Preço:</label>
+            <label for="price" class="mt-2">Preço:</label>
             <input type="text" class="form-control col-md-4" name="price" placeholder="R$">
 
-            <button class="btn btn-primary mt-2" type="submit">Adicionar produto</button>
+            <button class="btn btn-primary mt-5" type="submit">Adicionar produto</button>
         </div>
     </form>
 @endsection

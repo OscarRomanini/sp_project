@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('cabecalho')
-Categorias
+    <i class="fas fa-boxes mr-3"></i>Categorias
 @endsection
 
 @section('conteudo')
@@ -12,7 +12,7 @@ Categorias
     </div>
     @endif
 
-        <a href="{{route('addCategory')}}" class="btn btn-dark mb-4"> Adicionar categoria</a>
+        <a href="{{route('addCategory')}}" class="btn btn-dark mb-4"><i class="fas fa-plus-circle"></i> Adicionar categoria</a>
 
         <div class="categories">
             <ul class="list-group">

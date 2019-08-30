@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('cabecalho')
-Nova Categoria
+    <i class="fas fa-plus-circle mr-3"></i>Nova Categoria
 @endsection
 
 @section('conteudo')
@@ -18,12 +18,10 @@ Nova Categoria
 
         <form method="post">
             @csrf
-{{--            evita posts falsos--}}
-
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" class="form-control" name="name">
-                <button class="btn btn-primary mt-2" type="submit">Adicionar categoria</button>
+                <button class="btn btn-primary mt-2" type="submit"><i class="fas fa-plus-circle mr-3"></i>Adicionar categoria</button>
             </div>
         </form>
 @endsection

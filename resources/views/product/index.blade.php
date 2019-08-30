@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('cabecalho')
-    Produtos
+    <i class="fas fa-box-open mr-3"></i>Produtos
 @endsection
 
 @section('conteudo')
@@ -12,7 +12,7 @@
         </div>
     @endif
 
-    <a href="{{route('addProduct')}}" class="btn btn-dark mb-4"> Adicionar Produto</a>
+    <a href="{{route('addProduct')}}" class="btn btn-dark mb-4"><i class="fas fa-plus-circle"></i> Adicionar Produto</a>
 
     <div class="categories">
         <ul class="list-group">
@@ -20,7 +20,7 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Produto: {{ $product->name }}
                     |
-                    Categoria: {{ $product->category_id }}
+                    Categoria {{ $product->category_id }}
                     <form method="post" action="/produtos/{{$product->id}}" onsubmit="return confirm('Deseja realmente excluir esse registro?')">
                         @csrf
                         @method("DELETE")

@@ -11,10 +11,11 @@
 </head>
 
 <body>
+@component('header') @endcomponent
+<div style="background-color: whitesmoke; padding: 20px; margin-bottom: 20px">
+    <h1>@yield('cabecalho')</h1>
+</div>
     <div class="main">
-        <div class="jumbotron">
-            <h1>@yield('cabecalho')</h1>
-        </div>
         @yield('conteudo')
     </div>
 </body>
