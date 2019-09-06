@@ -20,8 +20,16 @@
             @csrf
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" name="name">
-                <button class="btn btn-primary mt-2" type="submit"><i class="fas fa-plus-circle mr-3"></i>Adicionar categoria</button>
+                <input type="text" class="form-control" name="name" value="@if(isset($category)){{$category['name']}}@else{{''}}@endif">
+                @if(!isset($category))
+                    @method("POST")
+                @else
+                    @method("PUT")
+                @endif
+                <button class="btn btn-primary mt-2" type="submit"><i class="fas fa-plus-circle mr-3"></i>
+                    @if(!isset($category)) Adicionar categoria @else Editar categoria @endif
+                </button>
+
             </div>
         </form>
 @endsection

@@ -27,7 +27,8 @@ class ProductsFormRequest extends FormRequest
     {
         return [
             'name' => 'required|min:3',
-            'category_id' => 'required'
+            'description' => 'required',
+            'price' => 'required'
         ];
     }
 
@@ -36,7 +37,8 @@ class ProductsFormRequest extends FormRequest
         return [
             'name.required' => 'O campo nome é obrigatório!',
             'name.min' => 'Preencha no mínimo 3 caracteres no campo nome!',
-            'category_id.required' => 'Selecione uma categoria!'
+            'description.required' => 'Preencha a descrição!',
+            'price.required' => 'Preencha o preço!'
         ];
     }
 }

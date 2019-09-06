@@ -13,4 +13,9 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function getCategoryById($id)
+    {
+        return Category::find($id)->name;
+    }
 }
